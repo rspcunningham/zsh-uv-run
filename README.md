@@ -26,7 +26,7 @@ All other `uv` subcommands (`uv add`, `uv sync`, etc.) are delegated to the orig
 ### [Oh My Zsh](https://ohmyz.sh) (one-liner)
 
 ```zsh
-bash <(curl -fsSL https://raw.githubusercontent.com/rspcunningham/zsh-uv-run/main/install.sh)
+curl -fsSL https://raw.githubusercontent.com/rspcunningham/zsh-uv-run/main/install.sh | sh
 ```
 
 This clones the plugin and adds it to your `plugins=(...)` list automatically.
