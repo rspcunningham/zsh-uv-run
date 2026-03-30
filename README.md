@@ -4,12 +4,14 @@ Smart tab completion for [`uv run`](https://docs.astral.sh/uv/reference/cli/#uv-
 
 ## What it completes
 
-When you type `uv run <TAB>`:
+When you type `uv run <TAB>` (or `uvr <TAB>`):
 
 - **`[project.scripts]`** entry points from `pyproject.toml` (e.g. `bench`, `serve`)
-- **`.py` files** in the current directory
-- **`.venv/bin` executables** — installed packages and tools (e.g. `pytest`, `ruff`)
-- **Directories** — navigate into subdirs to find nested files
+- **`.py` files** recursively (e.g. `tests/test_foo.py`)
+- **`.venv/bin` executables** — installed packages and tools (e.g. `pytest`, `ruff`), with noise like `python`, `pip`, and `activate` filtered out
+- **Directories** — navigate into subdirs
+
+Works from subdirectories — walks up to find `pyproject.toml` and `.venv` in the project root.
 
 After the command (`uv run main.py <TAB>`), it falls back to general file completion for script arguments.
 
