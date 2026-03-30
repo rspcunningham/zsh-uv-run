@@ -23,9 +23,16 @@ All other `uv` subcommands (`uv add`, `uv sync`, etc.) are delegated to the orig
 
 ## Install
 
-### [Oh My Zsh](https://ohmyz.sh)
+### [Oh My Zsh](https://ohmyz.sh) (one-liner)
 
-Clone into your custom plugins directory:
+```zsh
+bash <(curl -fsSL https://raw.githubusercontent.com/rspcunningham/zsh-uv-run/main/install.sh)
+```
+
+This clones the plugin and adds it to your `plugins=(...)` list automatically.
+
+<details>
+<summary>Manual oh-my-zsh install</summary>
 
 ```zsh
 git clone https://github.com/rspcunningham/zsh-uv-run ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-uv-run
@@ -36,6 +43,8 @@ Add it to your plugins list in `~/.zshrc` **after** `uv`:
 ```zsh
 plugins=(... uv zsh-uv-run ...)
 ```
+
+</details>
 
 ### [zinit](https://github.com/zdharma-continuum/zinit)
 
